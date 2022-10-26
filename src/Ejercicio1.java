@@ -14,12 +14,12 @@ public class Ejercicio1 {
 
         do {
 
-            //Utilizamos scanner para realizar la primera pregunta al usuario
+            //Utilizamos scanner para que el usuario nos conteste a la primera pregunta
             Scanner sc = new Scanner(System.in);
             System.out.println("¿Quiere solicitar una hipoteca?Introduzca true(si) o false(no)");
             hipoteca = sc.nextBoolean();
 
-            //Con el if hacemos que sus dos
+            //Con el if hacemos las condiciones dependiendo de su respuesta
             if (hipoteca) {
 
                 System.out.println("Perfecto, pero para que se la concedamos necesita cumplir con unos requisitos");
@@ -30,10 +30,12 @@ public class Ejercicio1 {
                 break;
             }
 
+            // Utilizamos otro scanner para la segunda pregunta
             Scanner sc1 = new Scanner(System.in);
             System.out.println("¿Usted trabaja?Introduzca true(si) o false(no)");
             trabajo = sc1.nextBoolean();
 
+            // Con el if hacemos las condiciones dependiendo de su respuesta
             if (trabajo) {
 
                 System.out.println("Perfecto ya cumple con uno de los requisitos restantes");
@@ -44,6 +46,7 @@ public class Ejercicio1 {
                 break;
             }
 
+        //Ahora utilizamos dos scanner para pedirle al usuario que nos escriba lo que vale la vivienda que quiere comprar y el dinero que quiere solicitar
         Scanner sc2 = new Scanner(System.in);
         System.out.println("¿Cuanto dinero cuesta la vivienda que quiere comprar?");
         vivienda = sc2.nextInt();
@@ -53,6 +56,7 @@ public class Ejercicio1 {
         System.out.println("Introduzca el dinero que desea solicitar.Recuerde que no puede superar el 80% del precio de la vivienda");
         dinero = sc3.nextInt();
 
+        //Ahora con un if le decimos que no puede superar el 80% del precio de la vivienda y dentro de ese if metemos otro if con la variable ahorrado para pedile al usuario que escriba cuanto dienro ahorrado tiene para
         if (dinero <= vivienda*80/100 ) {
 
             System.out.println("Perfecto este dinero entra dentro de los limites establecidos.Ahora introduzca lo que tiene ahorrado");
